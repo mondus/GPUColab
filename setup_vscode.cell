@@ -1,8 +1,0 @@
-!curl -fsSL https://code-server.dev/install.sh | sh
-!pip install -qqq pyngrok
-from pyngrok import ngrok
-url = ngrok.connect(9000)
-# print(url.public_url)
-!nohup code-server --port 9000 --auth none &
-from IPython.display import HTML
-HTML(f"<h3>Visual Studio Code can now be used in your browser at the following <a href='{url.public_url}' target='_blank'>link<a><h3>")
